@@ -1,28 +1,28 @@
 class CcSwitchCli < Formula
   desc "Command-Line Management Tool for Claude Code, Codex & Gemini CLI"
   homepage "https://github.com/kingcanfish/cc-switch-cli"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/kingcanfish/cc-switch-cli/releases/download/v0.1.1/cc-switch-cli-v0.1.1-darwin-arm64.tar.gz"
-      sha256 "bd843fc130c9f437aafe74d2b418fcd8497d9ed3cfb80dc6b741d9e7e3e7b880"
+      url "https://github.com/kingcanfish/cc-switch-cli/releases/download/v0.1.2/cc-switch-cli-v0.1.2-darwin-arm64.tar.gz"
+      sha256 "94e8c8257aa74a774736e368b6f14ee0f4178cc50e36b6e270b67ee87fb07a3c"
     end
     on_intel do
-      url "https://github.com/kingcanfish/cc-switch-cli/releases/download/v0.1.1/cc-switch-cli-v0.1.1-darwin-x64.tar.gz"
-      sha256 "647085d7e2b891d0df85b649fa3f8b406fbac4761e5675acdd449987516428f3"
+      url "https://github.com/kingcanfish/cc-switch-cli/releases/download/v0.1.2/cc-switch-cli-v0.1.2-darwin-x64.tar.gz"
+      sha256 "96935796f687547a433aab0fb57c7026fd0c515b4be42aad35962d5641705887"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/kingcanfish/cc-switch-cli/releases/download/v0.1.1/cc-switch-cli-v0.1.1-linux-arm64-musl.tar.gz"
-      sha256 "2c0bd5f19fa8862ccbf61400c229f2cf5e30260be2216ab2e7cd13c2d851b591"
+      url "https://github.com/kingcanfish/cc-switch-cli/releases/download/v0.1.2/cc-switch-cli-v0.1.2-linux-arm64-musl.tar.gz"
+      sha256 "4d6f6342a8ca761dc66875799f4d755f5dd5736b2d54fba73820b9ebd0e7b566"
     end
     on_intel do
-      url "https://github.com/kingcanfish/cc-switch-cli/releases/download/v0.1.1/cc-switch-cli-v0.1.1-linux-x64-musl.tar.gz"
-      sha256 "d44f4b9248e8101fd150a6a621429eb5c48b3904897d6822e0bf2a4ca0acb28a"
+      url "https://github.com/kingcanfish/cc-switch-cli/releases/download/v0.1.2/cc-switch-cli-v0.1.2-linux-x64-musl.tar.gz"
+      sha256 "230747210860900213851f00101de143199cda577d33a445a0dad5ed4ac02b4d"
     end
   end
 
