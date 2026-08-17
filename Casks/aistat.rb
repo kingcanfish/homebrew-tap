@@ -1,6 +1,6 @@
 cask "aistat" do
-  version "0.1.0"
-  sha256 "3cb927ab51b371cec27a363a2403377ecc895b53de77578ab7b5442308b7c133"
+  version "0.1.1"
+  sha256 "b0a658ce418b7f9899c60649a8de5533ef833045589d728b0f1614c2227ef218"
 
   url "https://github.com/kingcanfish/aistat/releases/download/v#{version}/AIStat_#{version}_universal.dmg",
       verified: "github.com/kingcanfish/aistat/"
@@ -8,7 +8,7 @@ cask "aistat" do
   desc "Menu bar app that watches AI service status pages"
   homepage "https://github.com/kingcanfish/aistat"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "AIStat.app"
 
