@@ -1,6 +1,6 @@
 cask "aistat" do
-  version "0.2.1"
-  sha256 "a9efd962e4165a2d56c7c3cba6830f1cf1841cc92f0a2654aae3d10f11825630"
+  version "0.3.0"
+  sha256 "110d928cb4a9b87b84b4afd46ec34d1527265752ffe4b193bb0f6c81b951bbec"
 
   url "https://github.com/kingcanfish/aistat/releases/download/v#{version}/AIStat_#{version}_universal.dmg",
       verified: "github.com/kingcanfish/aistat/"
@@ -8,7 +8,9 @@ cask "aistat" do
   desc "Menu bar app that watches AI service status pages"
   homepage "https://github.com/kingcanfish/aistat"
 
-  depends_on macos: :big_sur
+  # macOS 14. The native app uses @Observable and ContentUnavailableView, both
+  # of which landed in Sonoma. This is a floor the Tauri build did not have.
+  depends_on macos: :sonoma
 
   app "AIStat.app"
 
@@ -24,6 +26,7 @@ cask "aistat" do
 
       xattr -dr com.apple.quarantine "/Applications/AIStat.app"
 
-    AIStat runs in the menu bar only and has no Dock icon.
+    AIStat runs in the menu bar only and has no Dock icon. Click the icon for
+    the panel; Settings is in the panel's footer, or press Command-comma.
   EOS
 end
