@@ -1,6 +1,6 @@
 cask "aistat" do
-  version "0.3.0"
-  sha256 "110d928cb4a9b87b84b4afd46ec34d1527265752ffe4b193bb0f6c81b951bbec"
+  version "0.3.1"
+  sha256 "7b4a8c310fe82c250739d837656674b04b40a21c80411fd7847013ff02c7976f"
 
   url "https://github.com/kingcanfish/aistat/releases/download/v#{version}/AIStat_#{version}_universal.dmg",
       verified: "github.com/kingcanfish/aistat/"
