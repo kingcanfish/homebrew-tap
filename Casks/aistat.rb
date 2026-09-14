@@ -2,8 +2,7 @@ cask "aistat" do
   version "0.3.2"
   sha256 "856474647b6e9ce7854385b8657f28d31e32115df5beac35f3a8e4aa53a8dfcc"
 
-  url "https://github.com/kingcanfish/aistat/releases/download/v#{version}/AIStat_#{version}_universal.dmg",
-      verified: "github.com/kingcanfish/aistat/"
+  url "https://github.com/kingcanfish/aistat/releases/download/v#{version}/AIStat_#{version}_universal.dmg"
   name "AIStat"
   desc "Menu bar app that watches AI service status pages"
   homepage "https://github.com/kingcanfish/aistat"
