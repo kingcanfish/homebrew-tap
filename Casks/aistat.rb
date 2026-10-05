@@ -1,15 +1,15 @@
 cask "aistat" do
-  version "0.4.0"
-  sha256 "fe361f2d88cf64aeaed884a805d3d624527d546fa24a659fcbf19f84305555d1"
+  version "0.4.1"
+  sha256 "8cff1ea73d21cadbbd6132b037d91ee9a75fd9f0b30f00cf3b8368a736b02ed7"
 
   url "https://github.com/kingcanfish/aistat/releases/download/v#{version}/AIStat_#{version}_universal.dmg"
   name "AIStat"
   desc "Menu bar app that watches AI service status pages"
   homepage "https://github.com/kingcanfish/aistat"
 
-  # macOS 14. The native app uses @Observable and ContentUnavailableView, both
-  # of which landed in Sonoma. This is a floor the Tauri build did not have.
-  depends_on macos: :sonoma
+  # macOS 26. The native app is drawn with Tahoe's Liquid Glass APIs, and
+  # Package.swift sets the same floor. This is a floor the Tauri build did not have.
+  depends_on macos: :tahoe
 
   app "AIStat.app"
 
