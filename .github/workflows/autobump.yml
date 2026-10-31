@@ -1,0 +1,39 @@
+name: Autobump
+
+# Follows each package's GitHub releases from inside the tap, using this repo's
+# own GITHUB_TOKEN, so app repos need no PAT or tap-specific CI step.
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: autobump
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Bump casks and formulae
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python3 .github/scripts/autobump.py
+
+      - name: Push
+        run: |
+          if [ "$(git rev-list --count origin/main..HEAD)" -eq 0 ]; then
+            echo "Nothing to push."
+            exit 0
+          fi
+          # A package's own release CI may push to the tap concurrently.
+          git pull --rebase origin main
+          git push origin HEAD:main
